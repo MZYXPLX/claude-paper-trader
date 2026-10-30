@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light dark">
+  <title>Claude Paper Trader</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js" integrity="sha256-SERKgtTty1vsDxll+qzd4Y2cF9swY9BCq62i9wXJ9Uo=" crossorigin="anonymous" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="title-row">
+        <h1>Claude Paper Trader</h1>
+        <span id="mode-label" class="tag">Loading</span>
+      </div>
+      <p class="lede">Does Claude make better trading decisions than simple baselines when it manages pretend money on live market prices? <span id="capital-note"></span></p>
+      <dl id="header-facts" class="facts"></dl>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div id="load-error" class="banner banner-error" hidden></div>
+    <div id="banners"></div>
+
+    <nav class="tabs" role="tablist" aria-label="Markets">
+      <button type="button" role="tab" id="tab-crypto" aria-controls="panel" aria-selected="true" data-market="crypto">Crypto</button>
+      <button type="button" role="tab" id="tab-stocks" aria-controls="panel" aria-selected="false" data-market="stocks">US stocks</button>
+    </nav>
+
+    <section id="panel" role="tabpanel" aria-labelledby="tab-crypto">
+      <p id="market-meta" class="muted"></p>
+
+      <section class="card">
+        <h2>Equity</h2>
+        <div class="chart-box">
+          <canvas id="equity-chart" aria-label="Equity curve for each strategy" role="img"></canvas>
+          <p id="chart-empty" class="empty" hidden>No equity data yet.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Performance</h2>
+        <div class="table-scroll"><table id="metrics-table"></table></div>
+        <p class="note">Return vs buy and hold is in percentage points. Net of API cost subtracts the Claude API spend for that portfolio from its equity. Volatility and Sharpe use daily returns (risk-free rate 0) and need 30 days of data. Turnover is total traded value divided by starting capital.</p>
+      </section>
+
+      <section class="card">
+        <h2>Latest Claude decision</h2>
+        <div id="claude-decisions"></div>
+      </section>
+
+      <section class="card">
+        <h2>Holdings</h2>
+        <div id="holdings" class="holdings-grid"></div>
+      </section>
+
+      <section class="card">
+        <h2>Recent trades</h2>
+        <div class="table-scroll"><table id="trades-table"></table></div>
+      </section>
+    </section>
+
+    <section class="card">
+      <h2>API spend</h2>
+      <div id="spend"></div>
+    </section>
+
+    <section class="card">
+      <h2>Runs</h2>
+      <div class="table-scroll"><table id="runs-table"></table></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Simulated trading with pretend money. Not financial advice.</p>
+      <p class="muted">Prices: Coinbase Exchange and Kraken (crypto), Alpaca IEX feed (stocks). Data updates after each scheduled run.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,60 @@
+experiment:
+  starting_capital_usd: 10000
+  dry_run: auto            # auto = dry-run when ANTHROPIC_API_KEY is not set
+  trading_enabled: true    # kill switch: false = record prices and equity, place no simulated trades
+
+markets:
+  crypto:
+    enabled: true
+    symbols: [BTC-USD, ETH-USD, SOL-USD, XRP-USD, LINK-USD, DOGE-USD]
+    data_source: coinbase  # fallback: kraken
+    benchmark: BTC-USD
+    fee_bps: 30
+    slippage_bps: 10
+    max_data_age_minutes: 90
+  stocks:
+    enabled: true
+    symbols: [SPY, QQQ, AAPL, MSFT, NVDA, AMZN, GOOGL, META, JPM, XOM, LLY, COST]
+    data_feed: iex
+    benchmark: SPY
+    fee_bps: 0
+    slippage_bps: 5
+    max_data_age_minutes: 30
+    mirror_claude_to_alpaca_paper: false
+
+strategies:
+  - id: claude_sonnet
+    type: claude
+    model: claude-sonnet-5-5
+    enabled: true
+  - id: rule_trend
+    type: rule_trend
+    enabled: true
+  - id: buy_hold
+    type: buy_hold
+    enabled: true
+  - id: claude_haiku
+    type: claude
+    model: claude-haiku-5-5
+    enabled: false
+
+risk:
+  max_position_weight: 0.25
+  min_cash_weight: 0.05
+  max_turnover_per_run: 0.50   # fraction of equity that may be traded in one run
+  min_trade_usd: 25
+  min_weight_change: 0.02      # ignore target changes smaller than this
+  drawdown_halt: 0.30          # if equity falls 30% from its peak, stop opening new positions and flag it
+
+claude:
+  max_tokens: 4000             # thinking tokens count toward this limit (see README, Decisions)
+  effort: low                  # low | medium | high | xhigh | max
+  request_timeout_seconds: 60
+  max_retries: 2
+  history_runs_in_prompt: 5
+
+budget:
+  monthly_usd_cap: 10
+  prices_per_mtok:             # keep in sync with Anthropic's pricing page
+    claude-sonnet-5-5: { input: 2.00, output: 10.00 }
+    claude-haiku-5-5: { input: 0.10, output: 0.50 }
