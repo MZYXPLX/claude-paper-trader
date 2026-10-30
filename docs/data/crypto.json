@@ -1,0 +1,379 @@
+{
+  "market": "crypto",
+  "generated_at": "2026-10-30T09:05:24Z",
+  "enabled": true,
+  "benchmark": "BTC-USD",
+  "symbols": [
+    "BTC-USD",
+    "ETH-USD",
+    "SOL-USD",
+    "XRP-USD",
+    "LINK-USD",
+    "DOGE-USD"
+  ],
+  "started_at": "2026-10-30T09:05:20Z",
+  "last_run": {
+    "run_id": "crypto-20261030T090520Z",
+    "market": "crypto",
+    "started_at": "2026-10-30T09:05:20Z",
+    "finished_at": "2026-10-30T09:05:24Z",
+    "status": "ok",
+    "mode": "dry_run",
+    "offline": false,
+    "trades": 7,
+    "errors": [],
+    "next_open": null,
+    "reset": false
+  },
+  "strategies": [
+    {
+      "id": "claude_sonnet",
+      "label": "Claude (claude-sonnet-5-5)",
+      "type": "claude",
+      "model": "claude-sonnet-5-5",
+      "enabled": true,
+      "is_claude": true,
+      "mode": "dry_run",
+      "created_at": "2026-10-30T09:05:20Z",
+      "cash": 4985.0,
+      "drawdown_halted": false,
+      "metrics": {
+        "equity": 9980.0,
+        "total_return_pct": -0.2,
+        "excess_return_vs_buy_hold_pct": 0.18,
+        "max_drawdown_pct": 0.2,
+        "daily_points": 1,
+        "volatility_pct": null,
+        "sharpe": null,
+        "risk_stats_note": "Needs 30+ days of data",
+        "trades": 6,
+        "turnover": 0.5,
+        "fees_paid": 15.0,
+        "slippage_paid": 5.0,
+        "round_trips_closed": 0,
+        "win_rate_pct": null,
+        "days_running": 0.0,
+        "api_cost": 0,
+        "equity_net_of_api_cost": 9980.0,
+        "return_net_of_api_cost_pct": -0.2
+      },
+      "equity_curve": [
+        [
+          1793351120000,
+          10000.0
+        ],
+        [
+          1793351120000,
+          9980.0
+        ]
+      ],
+      "holdings": [
+        {
+          "symbol": "DOGE-USD",
+          "quantity": 14558.00536042605,
+          "price": 0.0755,
+          "value": 1099.13,
+          "weight_pct": 11.01,
+          "avg_cost": 0.07580222649999999,
+          "unrealized_pct": -0.4
+        },
+        {
+          "symbol": "ETH-USD",
+          "quantity": 0.47629353658592277,
+          "price": 2225.5,
+          "value": 1059.99,
+          "weight_pct": 10.62,
+          "avg_cost": 2234.4086764999993,
+          "unrealized_pct": -0.4
+        },
+        {
+          "symbol": "SOL-USD",
+          "quantity": 8.286667798726205,
+          "price": 97.15,
+          "value": 805.05,
+          "weight_pct": 8.07,
+          "avg_cost": 97.53889145,
+          "unrealized_pct": -0.4
+        },
+        {
+          "symbol": "BTC-USD",
+          "quantity": 0.009370835419323736,
+          "price": 77847.0,
+          "value": 729.49,
+          "weight_pct": 7.31,
+          "avg_cost": 78158.62154099999,
+          "unrealized_pct": -0.4
+        },
+        {
+          "symbol": "XRP-USD",
+          "quantity": 533.1043298077406,
+          "price": 1.2603,
+          "value": 671.87,
+          "weight_pct": 6.73,
+          "avg_cost": 1.2653449808999997,
+          "unrealized_pct": -0.4
+        },
+        {
+          "symbol": "LINK-USD",
+          "quantity": 57.28719841916787,
+          "price": 10.988,
+          "value": 629.47,
+          "weight_pct": 6.31,
+          "avg_cost": 11.031984964,
+          "unrealized_pct": -0.4
+        }
+      ],
+      "latest_decision": {
+        "timestamp": "2026-10-30T09:05:20Z",
+        "status": "ok",
+        "error": null,
+        "source": "mock_claude",
+        "market_view": "Dry run: mock decision with small random tilts around equal weight. Not a Claude decision.",
+        "risk_level": "low",
+        "notes_for_next_run": "Dry run. No real analysis was done.",
+        "warnings": [],
+        "guardrail_adjustments": [
+          "turnover 0.9189 above 0.5000; scaled trades by 0.5441"
+        ],
+        "model": "mock",
+        "cost_usd": null,
+        "targets": [
+          {
+            "symbol": "BTC-USD",
+            "proposed": 0.1342,
+            "final": 0.073,
+            "conviction": 4,
+            "reason": "Mock tilt (dry run)"
+          },
+          {
+            "symbol": "ETH-USD",
+            "proposed": 0.195,
+            "final": 0.1061,
+            "conviction": 4,
+            "reason": "Mock tilt (dry run)"
+          },
+          {
+            "symbol": "SOL-USD",
+            "proposed": 0.1481,
+            "final": 0.0806,
+            "conviction": 1,
+            "reason": "Mock tilt (dry run)"
+          },
+          {
+            "symbol": "XRP-USD",
+            "proposed": 0.1236,
+            "final": 0.0673,
+            "conviction": 3,
+            "reason": "Mock tilt (dry run)"
+          },
+          {
+            "symbol": "LINK-USD",
+            "proposed": 0.1158,
+            "final": 0.063,
+            "conviction": 5,
+            "reason": "Mock tilt (dry run)"
+          },
+          {
+            "symbol": "DOGE-USD",
+            "proposed": 0.2022,
+            "final": 0.11,
+            "conviction": 2,
+            "reason": "Mock tilt (dry run)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rule_trend",
+      "label": "Trend rule",
+      "type": "rule_trend",
+      "model": null,
+      "enabled": true,
+      "is_claude": false,
+      "mode": null,
+      "created_at": "2026-10-30T09:05:20Z",
+      "cash": 10000.0,
+      "drawdown_halted": false,
+      "metrics": {
+        "equity": 10000.0,
+        "total_return_pct": 0.0,
+        "excess_return_vs_buy_hold_pct": 0.38,
+        "max_drawdown_pct": 0.0,
+        "daily_points": 1,
+        "volatility_pct": null,
+        "sharpe": null,
+        "risk_stats_note": "Needs 30+ days of data",
+        "trades": 0,
+        "turnover": 0.0,
+        "fees_paid": 0,
+        "slippage_paid": 0,
+        "round_trips_closed": 0,
+        "win_rate_pct": null,
+        "days_running": 0.0,
+        "api_cost": null,
+        "equity_net_of_api_cost": null,
+        "return_net_of_api_cost_pct": null
+      },
+      "equity_curve": [
+        [
+          1793351120000,
+          10000.0
+        ],
+        [
+          1793351120000,
+          10000.0
+        ]
+      ],
+      "holdings": [],
+      "latest_decision": null
+    },
+    {
+      "id": "buy_hold",
+      "label": "Buy and hold",
+      "type": "buy_hold",
+      "model": null,
+      "enabled": true,
+      "is_claude": false,
+      "mode": null,
+      "created_at": "2026-10-30T09:05:20Z",
+      "cash": 471.5,
+      "drawdown_halted": false,
+      "metrics": {
+        "equity": 9962.01,
+        "total_return_pct": -0.38,
+        "excess_return_vs_buy_hold_pct": null,
+        "max_drawdown_pct": 0.38,
+        "daily_points": 1,
+        "volatility_pct": null,
+        "sharpe": null,
+        "risk_stats_note": "Needs 30+ days of data",
+        "trades": 1,
+        "turnover": 0.95,
+        "fees_paid": 28.5,
+        "slippage_paid": 9.49,
+        "round_trips_closed": 0,
+        "win_rate_pct": null,
+        "days_running": 0.0,
+        "api_cost": null,
+        "equity_net_of_api_cost": null,
+        "return_net_of_api_cost_pct": null
+      },
+      "equity_curve": [
+        [
+          1793351120000,
+          10000.0
+        ],
+        [
+          1793351120000,
+          9962.01
+        ]
+      ],
+      "holdings": [
+        {
+          "symbol": "BTC-USD",
+          "quantity": 0.1219123343289978,
+          "price": 77847.0,
+          "value": 9490.51,
+          "weight_pct": 95.27,
+          "avg_cost": 78158.62154099999,
+          "unrealized_pct": -0.4
+        }
+      ],
+      "latest_decision": null
+    }
+  ],
+  "recent_trades": [
+    {
+      "timestamp": "2026-10-30T09:05:20Z",
+      "strategy": "claude_sonnet",
+      "strategy_label": "Claude (claude-sonnet-5-5)",
+      "symbol": "BTC-USD",
+      "side": "buy",
+      "quantity": 0.009370835419323736,
+      "fill_price": 77924.847,
+      "notional": 730.22,
+      "fee": 2.19,
+      "realized_pnl": null,
+      "reason": "Mock tilt (dry run)"
+    },
+    {
+      "timestamp": "2026-10-30T09:05:20Z",
+      "strategy": "claude_sonnet",
+      "strategy_label": "Claude (claude-sonnet-5-5)",
+      "symbol": "ETH-USD",
+      "side": "buy",
+      "quantity": 0.47629353658592277,
+      "fill_price": 2227.7254999999996,
+      "notional": 1061.05,
+      "fee": 3.18,
+      "realized_pnl": null,
+      "reason": "Mock tilt (dry run)"
+    },
+    {
+      "timestamp": "2026-10-30T09:05:20Z",
+      "strategy": "claude_sonnet",
+      "strategy_label": "Claude (claude-sonnet-5-5)",
+      "symbol": "SOL-USD",
+      "side": "buy",
+      "quantity": 8.286667798726205,
+      "fill_price": 97.24714999999999,
+      "notional": 805.85,
+      "fee": 2.42,
+      "realized_pnl": null,
+      "reason": "Mock tilt (dry run)"
+    },
+    {
+      "timestamp": "2026-10-30T09:05:20Z",
+      "strategy": "claude_sonnet",
+      "strategy_label": "Claude (claude-sonnet-5-5)",
+      "symbol": "XRP-USD",
+      "side": "buy",
+      "quantity": 533.1043298077406,
+      "fill_price": 1.2615602999999997,
+      "notional": 672.54,
+      "fee": 2.02,
+      "realized_pnl": null,
+      "reason": "Mock tilt (dry run)"
+    },
+    {
+      "timestamp": "2026-10-30T09:05:20Z",
+      "strategy": "claude_sonnet",
+      "strategy_label": "Claude (claude-sonnet-5-5)",
+      "symbol": "LINK-USD",
+      "side": "buy",
+      "quantity": 57.28719841916787,
+      "fill_price": 10.998987999999999,
+      "notional": 630.1,
+      "fee": 1.89,
+      "realized_pnl": null,
+      "reason": "Mock tilt (dry run)"
+    },
+    {
+      "timestamp": "2026-10-30T09:05:20Z",
+      "strategy": "claude_sonnet",
+      "strategy_label": "Claude (claude-sonnet-5-5)",
+      "symbol": "DOGE-USD",
+      "side": "buy",
+      "quantity": 14558.00536042605,
+      "fill_price": 0.07557549999999999,
+      "notional": 1100.23,
+      "fee": 3.3,
+      "realized_pnl": null,
+      "reason": "Mock tilt (dry run)"
+    },
+    {
+      "timestamp": "2026-10-30T09:05:20Z",
+      "strategy": "buy_hold",
+      "strategy_label": "Buy and hold",
+      "symbol": "BTC-USD",
+      "side": "buy",
+      "quantity": 0.1219123343289978,
+      "fill_price": 77924.847,
+      "notional": 9500.0,
+      "fee": 28.5,
+      "realized_pnl": null,
+      "reason": "Initial purchase of the benchmark"
+    }
+  ],
+  "banners": []
+}

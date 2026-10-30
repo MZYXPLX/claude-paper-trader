@@ -1,0 +1,25 @@
+{
+  "market": "stocks",
+  "generated_at": "2026-10-30T09:05:24Z",
+  "enabled": true,
+  "benchmark": "SPY",
+  "symbols": [
+    "SPY",
+    "QQQ",
+    "AAPL",
+    "MSFT",
+    "NVDA",
+    "AMZN",
+    "GOOGL",
+    "META",
+    "JPM",
+    "XOM",
+    "LLY",
+    "COST"
+  ],
+  "started_at": null,
+  "last_run": null,
+  "strategies": [],
+  "recent_trades": [],
+  "banners": []
+}

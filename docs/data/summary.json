@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-10-30T09:05:24Z",
+  "experiment_started_at": "2026-10-30T09:05:20Z",
+  "starting_capital_usd": 10000.0,
+  "mode_label": "Dry run",
+  "markets": {
+    "crypto": {
+      "enabled": true,
+      "started_at": "2026-10-30T09:05:20Z",
+      "last_run": {
+        "run_id": "crypto-20261030T090520Z",
+        "market": "crypto",
+        "started_at": "2026-10-30T09:05:20Z",
+        "finished_at": "2026-10-30T09:05:24Z",
+        "status": "ok",
+        "mode": "dry_run",
+        "offline": false,
+        "trades": 7,
+        "errors": [],
+        "next_open": null,
+        "reset": false
+      }
+    },
+    "stocks": {
+      "enabled": true,
+      "started_at": null,
+      "last_run": null
+    }
+  },
+  "costs": {
+    "month": "2026-10",
+    "month_to_date": 0,
+    "cap": 10.0,
+    "total": 0
+  },
+  "runs": [
+    {
+      "run_id": "crypto-20261030T090520Z",
+      "market": "crypto",
+      "started_at": "2026-10-30T09:05:20Z",
+      "finished_at": "2026-10-30T09:05:24Z",
+      "status": "ok",
+      "mode": "dry_run",
+      "offline": false,
+      "trades": 7,
+      "errors": [],
+      "next_open": null,
+      "reset": false
+    }
+  ],
+  "banners": []
+}

@@ -1,0 +1,71 @@
+{
+  "strategy_id": "claude_sonnet",
+  "market": "crypto",
+  "created_at": "2026-10-30T09:05:20Z",
+  "starting_capital": 10000.0,
+  "cash": 4985.0,
+  "lots": {
+    "BTC-USD": [
+      {
+        "qty": 0.009370835419323736,
+        "unit_cost": 78158.62154099999,
+        "opened_at": "2026-10-30T09:05:20Z"
+      }
+    ],
+    "ETH-USD": [
+      {
+        "qty": 0.47629353658592277,
+        "unit_cost": 2234.4086764999993,
+        "opened_at": "2026-10-30T09:05:20Z"
+      }
+    ],
+    "SOL-USD": [
+      {
+        "qty": 8.286667798726205,
+        "unit_cost": 97.53889145,
+        "opened_at": "2026-10-30T09:05:20Z"
+      }
+    ],
+    "XRP-USD": [
+      {
+        "qty": 533.1043298077406,
+        "unit_cost": 1.2653449808999997,
+        "opened_at": "2026-10-30T09:05:20Z"
+      }
+    ],
+    "LINK-USD": [
+      {
+        "qty": 57.28719841916787,
+        "unit_cost": 11.031984964,
+        "opened_at": "2026-10-30T09:05:20Z"
+      }
+    ],
+    "DOGE-USD": [
+      {
+        "qty": 14558.00536042605,
+        "unit_cost": 0.07580222649999999,
+        "opened_at": "2026-10-30T09:05:20Z"
+      }
+    ]
+  },
+  "last_prices": {
+    "BTC-USD": 77847.0,
+    "ETH-USD": 2225.5,
+    "SOL-USD": 97.15,
+    "XRP-USD": 1.2603,
+    "LINK-USD": 10.988,
+    "DOGE-USD": 0.0755
+  },
+  "peak_equity": 10000.0,
+  "drawdown_halted": false,
+  "has_traded": true,
+  "realized_pnl": 0.0,
+  "fees_paid": 15.0,
+  "slippage_paid": 4.995004995004332,
+  "traded_notional": 5000.0,
+  "trade_count": 6,
+  "mock_decisions": 1,
+  "live_decisions": 0,
+  "last_run_id": "crypto-20261030T090520Z",
+  "updated_at": "2026-10-30T09:05:20Z"
+}

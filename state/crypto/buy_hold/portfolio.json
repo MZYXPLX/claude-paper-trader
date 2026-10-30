@@ -1,0 +1,36 @@
+{
+  "strategy_id": "buy_hold",
+  "market": "crypto",
+  "created_at": "2026-10-30T09:05:20Z",
+  "starting_capital": 10000.0,
+  "cash": 471.5,
+  "lots": {
+    "BTC-USD": [
+      {
+        "qty": 0.1219123343289978,
+        "unit_cost": 78158.62154099999,
+        "opened_at": "2026-10-30T09:05:20Z"
+      }
+    ]
+  },
+  "last_prices": {
+    "BTC-USD": 77847.0,
+    "ETH-USD": 2225.5,
+    "SOL-USD": 97.15,
+    "XRP-USD": 1.2603,
+    "LINK-USD": 10.988,
+    "DOGE-USD": 0.0755
+  },
+  "peak_equity": 10000.0,
+  "drawdown_halted": false,
+  "has_traded": true,
+  "realized_pnl": 0.0,
+  "fees_paid": 28.5,
+  "slippage_paid": 9.490509490508796,
+  "traded_notional": 9500.0,
+  "trade_count": 1,
+  "mock_decisions": 0,
+  "live_decisions": 0,
+  "last_run_id": "crypto-20261030T090520Z",
+  "updated_at": "2026-10-30T09:05:20Z"
+}
